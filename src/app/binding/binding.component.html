@@ -1,0 +1,79 @@
+<!-- attribute -->
+<!-- property  = [] -->
+<!-- event  = () -->
+
+
+<!-- <input type="text"  value="{{name}}" /> -->
+<!-- <input type="text" [value]="name" /> -->
+
+
+<!-- <button disabled={{isdisabled}}>Click</button> -->
+<!-- <button [disabled]="isdisabled">Click</button> -->
+
+<!-- ngClass -->
+<!-- Directives = custom html attributes -->
+<!-- <p class="nameofclass"></p>
+
+<p [class]="issuccess" [class]="isspecial">Hello World</p>
+<p [ngClass]="mainclass">Hello Earth</p>
+
+<p [class]="hasError?iserror:issuccess">Angular</p>
+
+ -->
+<!-- <span style="color:orange; background: blue">India</span> -->
+<!-- <br> -->
+<!-- <span [ngStyle]="spanColor">India</span> -->
+<!-- Template reference variable -->
+
+<div>
+    <input type="text" #myfield/>
+    <button (click)="handleLog(myfield.value)">Log</button>
+    {{logmsg}}
+</div>
+
+
+<!-- ngSwitch example -->
+<div [ngSwitch]="getX()">
+    <p *ngSwitchCase="2">Value is 2</p>
+    <p *ngSwitchCase="5">Value is 5</p>
+    <p *ngSwitchDefault>Not found</p>
+</div>
+
+
+
+<button (click)="handleButton($event)">Click</button>
+{{name}}
+{{count}}
+<button (click)="handleCount()">Reset</button>
+
+<br>
+<br>
+<br>
+<br>
+<input type="text"  (input)="handlePassword($event)" />
+{{erroMsg}}
+<ul>
+    <li>
+        at least 8 characters
+    </li>
+    <li>
+        at least 1 numeric character
+    </li>
+    <li>
+        at least 1 lowercase letter
+    </li>
+    <li>
+        at least 1 uppercase letter
+    </li>
+    <li>
+        at least 1 special character
+    </li>
+</ul>
+{{dataVariable}}
+
+
+
+<p *ngIf="flag">Hello World Hello Earth!!!</p>
+
+
+<p [hidden]="true">Angular!!!</p>
