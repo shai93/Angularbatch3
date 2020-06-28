@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angularbatch3';
+
+  name:string = "Parent content";
 }

@@ -72,8 +72,24 @@
 {{dataVariable}}
 
 
+<p *ngIf="flag; else elseblock">Shailesh</p>
 
-<p *ngIf="flag">Hello World Hello Earth!!!</p>
+<ng-template #elseblock>
+    <p>Invalid Name</p>
+</ng-template>
+<button (click)="handleFlag();">Click</button>
+
+<div *ngFor="let color of colors; first as f">
+    <p *ngIf="f">{{color}}</p>
+</div>
 
 
-<p [hidden]="true">Angular!!!</p>
+<div *ngFor="let person of data">
+    <p *ngIf="person.age > 2">{{person.name}}</p>
+</div>
+
+
+{{pv}}
+
+
+<!-- <p [hidden]="true">Angular!!!</p> -->

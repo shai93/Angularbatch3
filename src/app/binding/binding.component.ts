@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-binding',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./binding.component.scss']
 })
 export class BindingComponent implements OnInit {
+
+  @Input('parentname') pv:string;
+
   title="angular 10";
   name:string = "";
   count:number = 0;
@@ -22,7 +25,7 @@ export class BindingComponent implements OnInit {
   erroMsg:string = "Invalid Password";
   x:number = 25;
 
-  flag:boolean = false;
+  flag:boolean = true  ;
 
   spanColor:object = {
     color:"orange",
@@ -35,9 +38,29 @@ export class BindingComponent implements OnInit {
     error:true
   }
 
+
+
+  colors:string[] = ["Red", "Blue", "Green", "White", "Black"];
+
+  data:any[] = [
+    {
+      name:"A",
+      age:1
+    },
+    {
+      name:"B",
+      age:2
+    },
+    {
+      name:"C",
+      age:3
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {
+    console.log(this.pv)
   }
 
   handleButton(buttonevent){
@@ -71,6 +94,13 @@ export class BindingComponent implements OnInit {
     }else{
       this.erroMsg = "Invalid Password";
     }
+  }
+
+  handleFlag(){
+    // false
+    // !false = true
+    // !true = false
+    this.flag = !this.flag;
   }
 
 
