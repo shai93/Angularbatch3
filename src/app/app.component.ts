@@ -9,4 +9,9 @@ export class AppComponent {
   title = 'Angularbatch3';
 
   name:string = "Parent content";
+  childMessage:string;
+
+  incomingData(childValue){
+    this.childMessage = childValue;
+  }
 }

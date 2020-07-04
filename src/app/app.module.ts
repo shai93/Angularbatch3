@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FirstComponent as first} from './first/first.component';
 import { BindingComponent } from './binding/binding.component';
+import { SecondComponent } from './second/second.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     first,
-    BindingComponent
+    BindingComponent,
+    SecondComponent
   ],
   imports: [
     BrowserModule,
