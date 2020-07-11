@@ -8,10 +8,10 @@ import {Employee} from '../employee';
 export class FormsComponent implements OnInit {
   employeeModel:any;
   constructor() { }
-
+  courses:string[] = ["Angular", "Reactjs", "Nodejs", "MongoDB"];
 
   ngOnInit() {
-    this.employeeModel = new Employee("shailesh", "Shailesh@gmail.com")
+    this.employeeModel = new Employee("", "Shailesh@gmail.com", "")
   }
 
 
