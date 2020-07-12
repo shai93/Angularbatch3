@@ -1,12 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FirstComponent as first} from './first/first.component';
 import { BindingComponent } from './binding/binding.component';
 import { SecondComponent } from './second/second.component';
 import { FormsComponent } from './forms/forms.component';
+import { UserformComponent } from './userform/userform.component';
+import { CustomerformComponent } from './customerform/customerform.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,15 @@ import { FormsComponent } from './forms/forms.component';
     first,
     BindingComponent,
     SecondComponent,
-    FormsComponent
+    FormsComponent,
+    UserformComponent,
+    CustomerformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

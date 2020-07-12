@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <form [formGroup]="registrationForm">
+    <div class="form-group">
+      <label>Username</label>
+      <input [class.is-invalid]="username.touched && username.invalid"  type="text" formControlName="username"  class="form-control"/>
+      <small class="text-danger" *ngIf="username.touched && username.invalid">Username is required</small>
+    </div>
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" formControlName="email" class="form-control"/>
+    </div>
+    <button type="submit" class="btn btn-primary" >Submit</button>
+</form>
+</div>
