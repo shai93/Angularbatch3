@@ -3,7 +3,10 @@
     <div class="form-group">
       <label>Username</label>
       <input [class.is-invalid]="username.touched && username.invalid"  type="text" formControlName="username"  class="form-control"/>
-      <small class="text-danger" *ngIf="username.touched && username.invalid">Username is required</small>
+      <!-- {{username.errors|json}} -->
+      
+      <small class="text-danger" *ngIf="username.touched && username.invalid && username.errors?.required">Username is required</small>
+      <small class="text-danger" *ngIf="username.touched && username.invalid && username.errors?.forbiddenname">Username {{username.errors?.forbiddenname}} is not allowed</small>
     </div>
 
     <div class="form-group">

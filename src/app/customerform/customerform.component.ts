@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from  '@angular/forms';
+import { TakeNames } from '../shared/name.validator';
 @Component({
   selector: 'app-customerform',
   templateUrl: './customerform.component.html',
@@ -14,8 +15,8 @@ export class CustomerformComponent implements OnInit {
   }
 
   registrationForm = this.builder.group({
-    username:['', Validators.required],
-    email:['shailesh@gmail.com']
+    username:['', [Validators.required, TakeNames(/world/)]],
+    email:['shailesh@gmail.com', TakeNames(/shailesh@gmail.com/)]
   })
   ngOnInit() {
   }
