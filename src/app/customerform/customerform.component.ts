@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, Validators} from  '@angular/forms';
 import { TakeNames } from '../shared/name.validator';
+import { ServiceService } from '../service.service';
 @Component({
   selector: 'app-customerform',
   templateUrl: './customerform.component.html',
@@ -8,7 +9,8 @@ import { TakeNames } from '../shared/name.validator';
 })
 export class CustomerformComponent implements OnInit {
 
-  constructor(private builder:FormBuilder) { }
+  response:any;
+  constructor(private builder:FormBuilder, private  http: ServiceService) { }
 
   get username(){
     return this.registrationForm.get('username');
@@ -20,7 +22,15 @@ export class CustomerformComponent implements OnInit {
   })
   ngOnInit() {
   }
-  
-  
+
+
+  handleInput(input){
+    this.http.validateUserName(input).subscribe((response)=>{
+      this.response = response
+    }, (error)=>{
+
+    })
+  }
+    
 
 }

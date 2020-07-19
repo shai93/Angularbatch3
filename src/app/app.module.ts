@@ -9,7 +9,8 @@ import { SecondComponent } from './second/second.component';
 import { FormsComponent } from './forms/forms.component';
 import { UserformComponent } from './userform/userform.component';
 import { CustomerformComponent } from './customerform/customerform.component';
-
+import { ApiService } from './api.service';
+import  {HttpClientModule} from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +25,10 @@ import { CustomerformComponent } from './customerform/customerform.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
