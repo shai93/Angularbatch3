@@ -23,5 +23,9 @@ export class ServiceService {
   }
 
 
+  datapost(submission){
+    return this.http.post("https://jsonplaceholder.typicode.com/posts", submission)
+  }
+
   
 }

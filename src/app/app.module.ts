@@ -10,7 +10,8 @@ import { FormsComponent } from './forms/forms.component';
 import { UserformComponent } from './userform/userform.component';
 import { CustomerformComponent } from './customerform/customerform.component';
 import { ApiService } from './api.service';
-import  {HttpClientModule} from '@angular/common/http'
+import  {HttpClientModule} from '@angular/common/http';
+import { DatapostComponent } from './datapost/datapost.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,8 @@ import  {HttpClientModule} from '@angular/common/http'
     SecondComponent,
     FormsComponent,
     UserformComponent,
-    CustomerformComponent
+    CustomerformComponent,
+    DatapostComponent
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,21 @@ export  function TakeNames(name:RegExp){
 
 
 
+export function PasswordValidator(control:AbstractControl){
+    const password = control.get("password").value
+    const confirmPassword = control.get("confirmPassword").value
+
+    if(password !== confirmPassword){
+       return {
+           'mismatch':confirmPassword
+       } 
+    }else{
+        return null;
+    }
+}
+
+
+
 
 
 

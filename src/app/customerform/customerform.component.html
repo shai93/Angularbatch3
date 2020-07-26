@@ -1,8 +1,8 @@
 <div class="container-fluid">
-  <form [formGroup]="registrationForm">
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label>Username</label>
-      <input [class.is-invalid]="username.touched && username.invalid"  (input)="handleInput($event.target.value)" type="text" formControlName="username"  class="form-control"/>
+      <input [class.is-invalid]="username.touched && username.invalid"  type="text" formControlName="username"  class="form-control"/>
       <!-- {{username.errors|json}} -->
       
       <small class="text-danger" *ngIf="username.touched && username.invalid && username.errors?.required">Username is required</small>
@@ -14,6 +14,23 @@
       <label>Email</label>
       <input type="email" formControlName="email" class="form-control"/>
     </div>
-    <button type="submit" class="btn btn-primary" >Submit</button>
+    <div class="form-group">
+        <label>Password</label>
+        <input [class.is-invalid]="password.touched && password.invalid" type="password" formControlName="password" class="form-control"/>
+        <small class="text-danger" *ngIf="password.touched && password.invalid">Password is required</small>
+    </div>
+    <div class="form-group">
+        <label>Confirm Password</label>
+        <input [class.is-invalid]="confirmPassword.touched && (confirmPassword.invalid || registrationForm.errors?.mismatch)" type="password" formControlName="confirmPassword" class="form-control"/>
+        <small class="text-danger" *ngIf="confirmPassword.touched && confirmPassword.invalid">Confirm password is required</small>
+        <small class="text-danger" *ngIf="confirmPassword.touched && registrationForm.errors?.mismatch">Password do not match</small>
+    </div>
+    <div class="form-group">
+      <label>Gender</label>
+      <label><input type="radio" formControlName="gender" value="male"> Male</label>
+      <label><input type="radio" formControlName="gender" value="female"> Female</label>
+      <small class="text-danger" *ngIf="(gender.touched || submitted) && gender.invalid">Gender is required field</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 </div>
