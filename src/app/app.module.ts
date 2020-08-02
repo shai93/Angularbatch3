@@ -11,7 +11,9 @@ import { UserformComponent } from './userform/userform.component';
 import { CustomerformComponent } from './customerform/customerform.component';
 import { ApiService } from './api.service';
 import  {HttpClientModule} from '@angular/common/http';
-import { DatapostComponent } from './datapost/datapost.component'
+import { DatapostComponent } from './datapost/datapost.component';
+import { Child1Component } from './child1/child1.component';
+import { Child2Component } from './child2/child2.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { DatapostComponent } from './datapost/datapost.component'
     FormsComponent,
     UserformComponent,
     CustomerformComponent,
-    DatapostComponent
+    DatapostComponent,
+    Child1Component,
+    Child2Component
   ],
   imports: [
     BrowserModule,

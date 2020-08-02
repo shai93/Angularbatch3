@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {BehaviorSubject} from 'rxjs';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -8,6 +11,17 @@ import { Observable } from 'rxjs';
 export class ServiceService {
 
   constructor(private http:HttpClient) { }
+
+  private user = new BehaviorSubject<string>('Shailesh')
+  // broadcast
+  cast = this.user.asObservable();
+
+
+  editName(name){
+    this.user.next(name)
+  }
+  
+
 
   getName(){
     return "hello world";
