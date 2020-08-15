@@ -9,6 +9,7 @@ import { ServiceService } from './service.service';
 export class AppComponent {
   value: any;
   display: boolean = true;
+  count: number=0;
   
   constructor(private api:ServiceService){
     // console.log(this.api.getName())
@@ -38,5 +39,10 @@ export class AppComponent {
 
   handleChild(){
     this.display = !this.display;
+  }
+
+
+  handleCount(){
+    this.count++;
   }
 }

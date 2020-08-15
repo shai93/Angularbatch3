@@ -15,7 +15,10 @@ import { DatapostComponent } from './datapost/datapost.component';
 import { Child1Component } from './child1/child1.component';
 import { Child2Component } from './child2/child2.component';
 import { SearchComponent } from './search/search.component';
-import { HookComponent } from './hook/hook.component'
+import { HookComponent } from './hook/hook.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { CounterComponent } from './counter/counter.component';
+import { AgePipe } from './pipes/age.pipe'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,10 @@ import { HookComponent } from './hook/hook.component'
     Child1Component,
     Child2Component,
     SearchComponent,
-    HookComponent
+    HookComponent,
+    EmployeeComponent,
+    CounterComponent,
+    AgePipe
   ],
   imports: [
     BrowserModule,
