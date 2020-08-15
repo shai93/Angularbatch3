@@ -13,5 +13,11 @@
 <!-- <app-customerform></app-customerform> -->
 <!-- <app-datapost></app-datapost> -->
 
-<app-child1></app-child1>
-<app-child2></app-child2>
+<!-- <app-child1></app-child1> -->
+<!-- <app-child2></app-child2> -->
+<!-- <app-search></app-search> -->
+
+<input type="text" #val />
+<button (click)="handleChange(val)">Change</button>
+<button (click)="handleChild()" >Hide child</button>
+<app-hook [name]="value" *ngIf="display">{{value}}</app-hook>

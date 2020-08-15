@@ -7,12 +7,14 @@ import { ServiceService } from './service.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  value: any;
+  display: boolean = true;
   
   constructor(private api:ServiceService){
-    console.log(this.api.getName())
+    // console.log(this.api.getName())
 
     this.api.getUsers().subscribe((response)=>{
-        console.log(response)
+        // console.log(response)
     }, (error)=>{
 
     })
@@ -27,5 +29,14 @@ export class AppComponent {
 
   incomingData(childValue){
     this.childMessage = childValue;
+  }
+
+  handleChange(val){
+    this.value=val.value
+  }
+
+
+  handleChild(){
+    this.display = !this.display;
   }
 }

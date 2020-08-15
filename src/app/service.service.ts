@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import {BehaviorSubject} from 'rxjs';
+import {map, retry} from 'rxjs/operators'
 
 
 
@@ -21,14 +22,26 @@ export class ServiceService {
     this.user.next(name)
   }
   
+  getOfData():Observable<any>{
+    return of([1,2,3,4,5])
+  }
 
+  gethelloworld(){
+    return of('hello world from service file');
+  }
+
+  getNumber(){
+    return of(2).pipe(
+      map(x=>x*x)
+    )
+  }
 
   getName(){
     return "hello world";
   }
 
   getUsers():Observable<any>{
-    return this.http.get("https://jsonplaceholder.typicode.com/users");
+    return this.http.get("https://jsonplaceholder.typicode.com/users").pipe(retry(3))
   }
 
 

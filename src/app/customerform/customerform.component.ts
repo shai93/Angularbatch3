@@ -50,7 +50,7 @@ export class CustomerformComponent implements OnInit {
 
   onSubmit(){
     this.submitted = true;
-    console.log(this.registrationForm.value)
+    // console.log(this.registrationForm.value)
   }
     
 

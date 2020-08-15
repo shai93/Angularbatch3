@@ -13,7 +13,9 @@ import { ApiService } from './api.service';
 import  {HttpClientModule} from '@angular/common/http';
 import { DatapostComponent } from './datapost/datapost.component';
 import { Child1Component } from './child1/child1.component';
-import { Child2Component } from './child2/child2.component'
+import { Child2Component } from './child2/child2.component';
+import { SearchComponent } from './search/search.component';
+import { HookComponent } from './hook/hook.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { Child2Component } from './child2/child2.component'
     CustomerformComponent,
     DatapostComponent,
     Child1Component,
-    Child2Component
+    Child2Component,
+    SearchComponent,
+    HookComponent
   ],
   imports: [
     BrowserModule,

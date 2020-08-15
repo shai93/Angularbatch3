@@ -60,7 +60,7 @@ export class BindingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.pv)
+    // console.log(this.pv)
   }
 
   handleButton(buttonevent){
