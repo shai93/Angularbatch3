@@ -18,7 +18,11 @@ import { SearchComponent } from './search/search.component';
 import { HookComponent } from './hook/hook.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { CounterComponent } from './counter/counter.component';
-import { AgePipe } from './pipes/age.pipe'
+import { AgePipe } from './pipes/age.pipe';
+import { ListComponent } from './list/list.component';
+import { IndiaUsaComponent } from './india-usa/india-usa.component';
+import { AtlanticComponent } from './atlantic/atlantic.component';
+import { PacificComponent } from './pacific/pacific.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +39,11 @@ import { AgePipe } from './pipes/age.pipe'
     HookComponent,
     EmployeeComponent,
     CounterComponent,
-    AgePipe
+    AgePipe,
+    ListComponent,
+    IndiaUsaComponent,
+    AtlanticComponent,
+    PacificComponent
   ],
   imports: [
     BrowserModule,
