@@ -21,8 +21,8 @@ import { CounterComponent } from './counter/counter.component';
 import { AgePipe } from './pipes/age.pipe';
 import { ListComponent } from './list/list.component';
 import { IndiaUsaComponent } from './india-usa/india-usa.component';
-import { AtlanticComponent } from './atlantic/atlantic.component';
 import { PacificComponent } from './pacific/pacific.component'
+import { AtlanticModule } from './modules/atlantic/atlantic.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +42,6 @@ import { PacificComponent } from './pacific/pacific.component'
     AgePipe,
     ListComponent,
     IndiaUsaComponent,
-    AtlanticComponent,
     PacificComponent
   ],
   imports: [
@@ -50,7 +49,8 @@ import { PacificComponent } from './pacific/pacific.component'
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AtlanticModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
