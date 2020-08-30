@@ -6,11 +6,11 @@ import { AtlanticComponent } from './atlantic/atlantic.component';
 import { PacificComponent } from './pacific/pacific.component';
 
 const routes: Routes = [
-  {
-    path:"",    //base url
-    redirectTo:"india-usa",
-    pathMatch:"full"
-  },
+  // {
+  //   path:"",    //base url
+  //   redirectTo:"india-usa",
+  //   pathMatch:"full"
+  // },
   {
     path:"list",
     component:ListComponent

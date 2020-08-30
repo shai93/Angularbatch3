@@ -23,6 +23,8 @@ import { ListComponent } from './list/list.component';
 import { IndiaUsaComponent } from './india-usa/india-usa.component';
 import { PacificComponent } from './pacific/pacific.component'
 import { AtlanticModule } from './modules/atlantic/atlantic.module';
+import { ProductsModule } from './modules/products/products.module';
+import { ServicesModule } from './modules/services/services.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,9 +52,13 @@ import { AtlanticModule } from './modules/atlantic/atlantic.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AtlanticModule
+   
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    console.log('app module')
+  }
+ }

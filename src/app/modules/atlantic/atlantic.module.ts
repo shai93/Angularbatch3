@@ -15,4 +15,10 @@ import { RouterModule } from '@angular/router';
     AtlanticComponent
   ]
 })
-export class AtlanticModule { }
+export class AtlanticModule { 
+  constructor(){
+    console.log('atlantic module')
+  }
+}
+
+
